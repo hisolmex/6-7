@@ -28,11 +28,11 @@
 			<nav class="navigation">
 					<a href="index.html"><img src="img/logo_04.png"  title="logo" alt="logo"></a>
 					<ul class="top-menu">
-						<li><a href="#portfolio">FEATURES</a></li>
-						<li><a href="#about">WORKS</a></li>
-						<li><a href="#contact">OUT TEAM</a></li>
-						<li><a href="#about">TESTIMOTIALS</a></li>
-						<li><a href="#contact">DOWNLOAD</a></li>
+						<li><a href="#icon">FEATURES</a></li>
+						<li><a href="#gallery">WORKS</a></li>
+						<li><a href="#team">OUT TEAM</a></li>
+						<li><a href="#two-color">TESTIMOTIALS</a></li>
+						<li><a href="#download">DOWNLOAD</a></li>
 						
 					</ul>
 			</nav>
@@ -51,7 +51,7 @@
 	</header>
 
 
-	<section class="icon">
+	<section class="icon" id="icon">
 		<div class="container">
 			<div class="row">
 				<div class="col-4">
@@ -102,7 +102,7 @@
 		</div>
 		
 	</section>
-	<section class="gallery">
+	<section class="gallery" id="gallery">
 		<div class="container">
 			<div class="row">
 				<div class="col-3 item">
@@ -161,7 +161,7 @@
 						
 		</div>
 	</section>
-	<section class="team">
+	<section class="team" id="team">
 		<div class="container">
 			<div class="col-3">
 				<img src="img/women2.jpg" title="a" alt="s">
@@ -223,7 +223,7 @@
 		</div>
 	</section>
 	
-	<section class="two-color">
+	<section class="two-color" id="two-color">
 		
 		<div class="container">
 			<div class="row">
@@ -239,7 +239,7 @@
 	</section>
 	
 	
-	<section class="white">
+	<section class="white" id="download">
 		<div class="container">
 			<div class="row">
 				<h2>Are you ready to Start?Download Now For Free!</h2>
@@ -249,7 +249,7 @@
 		</div>
 	</section>
 
-	<section class="social-icon">
+	<section class="social-icon" id="footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-4">
@@ -288,6 +288,22 @@
 		</div>
 		</div>
 	</footer>
-	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+	</script>
 </body>
 </html>
